@@ -1,4 +1,16 @@
 /* HeroesComponent's private CSS styles */
+label {
+  width: 3em;
+  margin: .5em 0;
+  color: #607D8B;
+  font-weight: bold;
+}
+input {
+  border-radius: 4px;
+  border: solid 1px #ccc;
+  height: 1.5em;
+  margin-right: 5px;
+}
 .heroes {
   margin: 0 0 2em 0;
   list-style-type: none;
@@ -48,4 +60,26 @@
   text-align: right;
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
+}
+
+button {
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+  font-family: Arial;
+}
+
+button:hover {
+  background-color: #cfd8dc;
+}
+
+button.delete {
+  position: relative;
+  left: 192px;
+  top: -34px;
+  background-color: gray !important;
+  color: white;
 }
