@@ -1,0 +1,65 @@
+/* 
+.my-pagination /deep/ .ngx-pagination .current {
+    background:  none;
+    color: #ff0030;
+    font-weight: bold;
+    font-size: larger;
+    border-radius: 50px;
+}
+
+.my-pagination /deep/ .ngx-pagination a {
+    background: none;
+    color: #64b32c;
+    border-radius: 50px;
+}
+
+.my-pagination /deep/ .ngx-pagination a:hover, .ngx-pagination button:hover {
+    background: #e6e6e6;
+    border-radius: 50px;
+}
+
+.my-pagination /deep/ .ngx-pagination .pagination-previous a,
+.my-pagination /deep/ .ngx-pagination .pagination-next a
+{
+    color: white;
+}
+
+.my-pagination /deep/ .ngx-pagination .pagination-previous a:hover,
+.my-pagination /deep/ .ngx-pagination .pagination-next a:hover
+{
+    color: white;
+    font-weight: bold;
+}
+
+.my-pagination /deep/ .ngx-pagination .pagination-previous a,
+.my-pagination /deep/ .ngx-pagination .pagination-previous.disabled,
+.my-pagination /deep/ .ngx-pagination .pagination-next a,
+.my-pagination /deep/ .ngx-pagination .pagination-next.disabled
+{
+    background: #64b32c;
+    border-radius: 50px;
+}
+
+.my-pagination /deep/ .ngx-pagination .pagination-previous a::before,
+.my-pagination /deep/ .ngx-pagination .pagination-previous.disabled::before,
+.my-pagination /deep/ .ngx-pagination .pagination-next a::after,
+.my-pagination /deep/ .ngx-pagination .pagination-next.disabled::after 
+{ 
+    background-color: #64b32c;
+    border-radius: 50px;
+    content: none !important;
+}
+
+.company-custom {
+    color: #64b32c;
+    font-weight: bold;
+}
+
+.color-custom {
+    color: #64b32c;
+}
+
+.bold-custom {
+    
+    font-weight: bold;
+} */

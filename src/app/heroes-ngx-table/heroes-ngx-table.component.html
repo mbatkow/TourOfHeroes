@@ -1,0 +1,71 @@
+<p>heroes-ngx-table works!</p>
+
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Pożyczkodawca</th>
+        <th scope="col">Data ważności oferty</th>
+        <th scope="col">Wybrany oddział odbioru gotówki</th>
+        <th scope="col">Termin wizyty w oddziale</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+     <ng-container *ngFor="let item of elements | paginate: { itemsPerPage: 10, currentPage: p }">
+      <tr>
+        <th class="display-4 company-custom" scope="row">{{item.id}}</th>
+        <td class="bold-custom">{{item.date}}</td>
+        <td>{{item.branch}}</td>
+        <td>{{item.date2}}</td>
+        <td class="bold-custom color-custom">{{item.status}}</td>
+      </tr>
+      <div class="row">link</div>
+    </ng-container>
+    </tbody>
+  </table>
+
+<pagination-controls 
+(pageChange)="p = $event" 
+directionLinks="true" 
+previousLabel="<"
+nextLabel=">"
+class="my-pagination">
+</pagination-controls>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+
+<!-- <button type="button" class="btn btn-primary" (click)="isCollapsed = !isCollapsed"
+        [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">Toggle collapse
+</button>
+<hr>
+<div id="collapseBasic" [collapse]="isCollapsed">
+  <div class="well well-lg card card-block card-header">Some content</div>
+</div> -->
