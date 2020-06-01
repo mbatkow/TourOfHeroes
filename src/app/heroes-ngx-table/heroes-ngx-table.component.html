@@ -13,59 +13,35 @@
     <tbody>
      <ng-container *ngFor="let item of elements | paginate: { itemsPerPage: 10, currentPage: p }">
       <tr>
-        <th class="display-4 company-custom" scope="row">{{item.id}}</th>
+        <th class="company-custom" scope="row"><h4>{{item.id}}</h4></th>
         <td class="bold-custom">{{item.date}}</td>
         <td>{{item.branch}}</td>
         <td>{{item.date2}}</td>
         <td class="bold-custom color-custom">{{item.status}}</td>
       </tr>
-      <div class="row">link</div>
+      <tr class="no-hover">
+          <td colspan="5" class="no-border">
+            <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-link btn-link-custom" (click)="item.isCollapsed = !item.isCollapsed"
+                        [attr.aria-expanded]="!item.isCollapsed" aria-controls="collapseBasic">Rozwiń szczegóły oferty
+                </button>
+            </div> 
+                <div id="collapseBasic" [collapse]="item.isCollapsed" [isAnimated]="true">
+                    <div class="well well-lg card card-block card-header">Some content</div>
+                </div>    
+          </td>
+      </tr>
     </ng-container>
     </tbody>
   </table>
 
-<pagination-controls 
-(pageChange)="p = $event" 
-directionLinks="true" 
-previousLabel="<"
-nextLabel=">"
-class="my-pagination">
-</pagination-controls>
+<div class="d-flex justify-content-center">
+    <pagination-controls 
+    (pageChange)="p = $event" 
+    directionLinks="true" 
+    previousLabel="<"
+    nextLabel=">"
+    class="my-pagination">
+    </pagination-controls>
+</div>
 
-<table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
-
-<!-- <button type="button" class="btn btn-primary" (click)="isCollapsed = !isCollapsed"
-        [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic">Toggle collapse
-</button>
-<hr>
-<div id="collapseBasic" [collapse]="isCollapsed">
-  <div class="well well-lg card card-block card-header">Some content</div>
-</div> -->

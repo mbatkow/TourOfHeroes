@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-/*import { BrowserAnimationsModule } from '@angular/platform-browser/animations';*/
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MDBBootstrapModulesPro } from 'ng-uikit-pro-standard';
 import { MDBSpinningPreloader } from 'ng-uikit-pro-standard';
 import { NgModule } from '@angular/core';
@@ -8,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { NgxPaginationModule } from 'ngx-pagination';
-/*import { CollapseModule } from 'ngx-bootstrap/collapse';*/
+import { CollapseModule } from 'ngx-bootstrap/collapse';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,8 +37,8 @@ import { HeroesNgxTableComponent } from './heroes-ngx-table/heroes-ngx-table.com
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    /* BrowserAnimationsModule,
-    CollapseModule.forRoot(), */
+    BrowserAnimationsModule,
+    CollapseModule.forRoot(),
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.

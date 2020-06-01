@@ -9,7 +9,7 @@ export class HeroesNgxTableComponent implements OnInit {
 
   p: number;
   elements: any = [];
-  isCollapsed = false;
+  isCollapsed = true;
 
   constructor() { }
 
@@ -17,7 +17,8 @@ export class HeroesNgxTableComponent implements OnInit {
     this.p = 1;
 
     for (let i = 1; i <= 25; i++) {
-      this.elements.push({id: 'SKOK ' + i, date: 'Data ' + i, branch: 'Oddział ' + i, date2: 'Termin ' + i, status: 'Status'});
+      this.elements.push({id: 'SKOK ' + i, date: 'Data ' + i, branch: 'Oddział ' + i, date2: 'Termin ' + i, status: 'Status'
+      , isCollapsed: this.isCollapsed });
     }
   }
 
